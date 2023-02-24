@@ -8,15 +8,8 @@ import java.text.SimpleDateFormat;
 
 public class ExceptionDemo {
     public static void show(){
-        try(var fileReader = new FileReader("file1.txt")){
-            var value = fileReader.read();
-            new SimpleDateFormat().parse("");
-            System.out.println("File is opened");
-        }
-        catch (IOException | ParseException ex){
-            System.out.println(ex.getMessage());
-        }
-
+        var account = new Account();
+        account.deposit(1);
     }
     public static void sayHello(String name){
         System.out.println(name.toUpperCase());
