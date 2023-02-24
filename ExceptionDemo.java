@@ -3,14 +3,9 @@ package ExceptionTutorial;
 import java.io.IOException;
 
 public class ExceptionDemo {
-    public static void show() throws IOException{
+    public static void show() {
         var account = new Account();
-        try {
-            account.deposit(-1);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw e;
-        }
+        account.withdraw(1);
 
     }
     public static void sayHello(String name){
