@@ -6,8 +6,8 @@ public class ExceptionDemo {
         var account = new Account();
         try {
             account.withdraw(1);
-        } catch (InsufficientFundException e) {
-            System.out.println(e.getMessage());
+        } catch (AccountException e) {
+            e.printStackTrace();
         }
 
     }
