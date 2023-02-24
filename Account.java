@@ -8,12 +8,8 @@ public class Account {
         if(value<=0)
             throw new IllegalArgumentException();
     }
-    public void withdraw(float value){
+    public void withdraw(float value) throws InsufficientFundException{
         if(value>balance)
-            try {
-                throw new InsufficientFundException();
-            } catch (InsufficientFundException e) {
-                System.out.println(e.getMessage());
-            }
+            throw new InsufficientFundException();
     }
 }

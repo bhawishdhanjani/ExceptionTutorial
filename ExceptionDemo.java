@@ -1,11 +1,14 @@
 package ExceptionTutorial;
 
-import java.io.IOException;
 
 public class ExceptionDemo {
     public static void show() {
         var account = new Account();
-        account.withdraw(1);
+        try {
+            account.withdraw(1);
+        } catch (InsufficientFundException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
     public static void sayHello(String name){
