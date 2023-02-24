@@ -9,12 +9,8 @@ public class Account {
             throw new IllegalArgumentException();
     }
     public void withdraw(float value) throws AccountException{
-        if(value>balance){
-            var insufficientFundException = new InsufficientFundException();
-            var accountException = new AccountException();
-            accountException.initCause(insufficientFundException);
-            throw  accountException;
-        }
+        if(value>balance)
+            throw new AccountException(new InsufficientFundException());
 
     }
 }

@@ -7,7 +7,8 @@ public class ExceptionDemo {
         try {
             account.withdraw(1);
         } catch (AccountException e) {
-            e.printStackTrace();
+            var  cause = e.getCause();
+            System.out.println(cause.getMessage());
         }
 
     }
